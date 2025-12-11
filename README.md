@@ -7,21 +7,13 @@
   [![Bash](https://img.shields.io/badge/Language-Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
   [![Powered By](https://img.shields.io/badge/Powered%20By-Silicon-orange?style=flat-square)](https://github.com/Aloxaf/silicon)
   [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-  <p align="center">
-    <a href="#features">Features</a> •
-    <a href="#installation">Installation</a> •
-    <a href="#usage">Usage</a> •
-    <a href="#themes">Themes</a> •
-    <a href="#support">Support</a>
-  </p>
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://via.placeholder.com/1200x600.png?text=Showcase+Your+Code+Beautifully" alt="CodeLumer CLI Demo" width="100%">
+  <img src="./snapshots/photo-test.png" alt="CodeLumer CLI Demo" width="100%">
 </div>
 
 ---
@@ -74,13 +66,13 @@ Clone this repo or download the script directly.
 
 ```bash
 # Download the script
-curl -o code-snap.sh [https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/code-snap.sh](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/code-snap.sh)
+curl -o codelumer.sh [https://raw.githubusercontent.com/plantacerium/CodeLumer/main/codelumer.sh](https://raw.githubusercontent.com/plantacerium/CodeLumer/main/codelumer.sh)
 
 # Make it executable
-chmod +x code-snap.sh
+chmod +x codelumer.sh
 
 # (Optional) Move to global path
-sudo mv code-snap.sh /usr/local/bin/codesnap
+sudo mv codelumer.sh /usr/local/bin/codesnap
 ```
 
 -----
@@ -92,7 +84,7 @@ sudo mv code-snap.sh /usr/local/bin/codesnap
 Generate a snapshot of a single file using default settings (Dracula theme, 1920px width context).
 
 ```bash
-./code-snap.sh main.py
+sh codelumer.sh --font "Hack; Noto Color Emoji" --size 39 photo-test.sh
 ```
 
 ### Batch Mode (Directory)
@@ -100,7 +92,7 @@ Generate a snapshot of a single file using default settings (Dracula theme, 1920
 Recursively scan a directory and generate snapshots for all supported code files.
 
 ```bash
-./code-snap.sh ./src/components
+sh codelumer.sh --font "Hack; Noto Color Emoji" --size 39 ./phototest
 ```
 
 ### Customization Examples
@@ -108,19 +100,19 @@ Recursively scan a directory and generate snapshots for all supported code files
 **Change Theme and Font:**
 
 ```bash
-./code-snap.sh --theme Nord --font "JetBrains Mono" --size 28 app.rs
+./codelumer.sh --theme Nord --font "JetBrains Mono" --size 28 app.rs
 ```
 
 **Minimalist Style (No Window Controls or Line Numbers):**
 
 ```bash
-./code-snap.sh --no-window --no-line-numbers script.js
+./codelumer.sh --no-window --no-line-numbers script.js
 ```
 
 **Custom Output Directory:**
 
 ```bash
-./code-snap.sh --output ./assets/blog-images ./src
+./codelumer.sh --output ./assets/blog-images ./src
 ```
 
 -----
@@ -132,21 +124,10 @@ CodeSnap CLI supports all standard `.tmTheme` syntax highlighting files.
 To list all available themes on your machine:
 
 ```bash
-./code-snap.sh --list-themes
+./codelumer.sh --list-themes
 ```
 
 > **Tip:** You can install custom themes (like those from [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)) by placing `.tmTheme` files in `~/.config/silicon/themes/`.
-
------
-
-<div align="center">
-
-**Made with ❤️ and ☕ by the Plantacerium**
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/plantacerium)
-
-⭐ **Star us on GitHub** if the script is useful to You! ⭐
-</div>
 
 -----
 
@@ -162,3 +143,15 @@ This tool stands on the shoulders of giants. A huge thank you to:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE]
+
+## ⚡ Support
+<div align="center">
+
+**Made with ❤️ and ☕ by the Plantacerium**
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/plantacerium)
+
+⭐ **Star us on GitHub** if the script is useful to You! ⭐
+</div>
+
+-----

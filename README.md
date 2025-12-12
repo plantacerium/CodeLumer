@@ -140,6 +140,70 @@ This tool stands on the shoulders of giants. A huge thank you to:
 
 -----
 
+# `lens_assembler.sh` 📸 Lens Assembler - Picture in Picture + Code Composer
+
+A robust Bash script using **ImageMagick** to automatically overlay a circular avatar onto a code snippet or screenshot, mimicking the modern "dual camera" or "picture-in-picture" recording style for professional content creation.
+
+The script dynamically resizes the avatar relative to the background, applies a perfect circular mask, and adds a transparent shadow for a professional, floating effect.
+
+## 🌟 Features
+
+  * **Dynamic Scaling:** The avatar size is calculated as a percentage (default 20%) of the background image width, ensuring the avatar always fits regardless of the input resolution.
+  * **Perfect Circle Masking:** Uses ImageMagick's `DstIn` composite method for clean, artifact-free circular cropping.
+  * **Transparent Shadow:** Applies a soft drop shadow to the avatar, ensuring it "floats" above the code without any white or black background boxes.
+  * **Flexible Positioning:** Supports placing the avatar in any of the four corners (Top-Left, Top-Right, Bottom-Left, Bottom-Right).
+
+<div align="center">
+  <img src="./snapshots/reaction_shot.png" alt="Lens Assembler CLI Demo" width="100%">
+</div>
+
+## 💻 Prerequisites
+
+You must have **ImageMagick** installed on your system.
+
+**Installation Commands:**
+
+| OS | Command |
+| :--- | :--- |
+| **macOS (Homebrew)** | `brew install imagemagick` |
+| **Ubuntu/Debian** | `sudo apt-get install imagemagick` |
+| **CentOS/RHEL** | `sudo yum install ImageMagick` |
+| **Fedora** | `sudo dnf install ImageMagick` |
+
+## 🚀 Installation and Setup
+
+1.  **Save the Script:** Save the provided Bash code as `lens_assembler.sh`.
+2.  **Make it Executable:**
+    ```bash
+    chmod +x lens_assembler.sh
+    ```
+
+## 💡 Usage
+
+The script requires a background image (`-b`) and an avatar image (`-a`).
+
+### Basic Execution (Bottom Right Default)
+
+```bash
+./lens_assembler.sh -b code.png -a face.png -o reaction_shot.png
+```
+
+### Advanced Usage with Flags
+
+| Flag | Description | Values | Default |
+| :--- | :--- | :--- | :--- |
+| `-b` | **Required.** Path to the background (code snippet) image. | `[path/to/file]` | N/A |
+| `-a` | **Required.** Path to the avatar (face) image. | `[path/to/file]` | N/A |
+| `-p` | Position of the avatar in the corner. | `tl`, `tr`, `bl`, `br` | `br` (Bottom Right) |
+| `-s` | Scale of the avatar as a percentage of the background width. | `1` to `100` | `20` |
+| `-o` | Output filename. | `[filename]` | `output.png` |
+
+**Example: Top Left, 15% Scale**
+
+```bash
+./lens_assembler.sh -b code.png -a avatar.png -p tl -s 15 -o presentation_shot.png
+```
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE]

@@ -140,7 +140,7 @@ This tool stands on the shoulders of giants. A huge thank you to:
 
 -----
 
-# 📸 Lens Assembler - Dual CAmera Effect - Picture in Picture + Code Composer
+# 📸 Lens Assembler - Dual Camera Effect - Picture in Picture + Code Composer
 
 A robust Bash script using **ImageMagick** to automatically overlay a circular avatar onto a code snippet or screenshot, mimicking the modern "dual camera" or "picture-in-picture" recording style for professional content creation.
 
